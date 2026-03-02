@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.form-box{
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+}
+input[type="text"],
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+textarea:focus{
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,0.2);
+}
+textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+button{
+    width: 100%;
+    padding: 12px;
+    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+button:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+button:active {
+    transform: translateY(0);
+} 
+.message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.error_message {
+    background: #ffebee;
+    color: #c62828;
+    border: 2px solid #ef5350;
+}
+.success_message {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #66bb6a;
+}
+.notes-section h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.note-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-left: 5px solid #667eea;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.note-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.note-content {
+    color: #555;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.no-notes {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

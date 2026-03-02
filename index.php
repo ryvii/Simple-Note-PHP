@@ -45,13 +45,13 @@
             
             <?php if (!empty($error_message)): ?>
                 <div class="message error_message">
-                    <?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?>
+                    <?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); //safe output of error?>
                 </div>
             <?php endif; ?>
 
             <?php if (!empty($success_message)): ?>
                 <div class="message success_message">
-                    <?php echo htmlspecialchars($success_message, ENT_QUOTES, 'UTF-8'); ?>
+                    <?php echo htmlspecialchars($success_message, ENT_QUOTES, 'UTF-8'); //safe output of success?>
                 </div>
             <?php endif; ?>
             
@@ -63,7 +63,7 @@
                     id="title"
                     name="title"
                     placeholder="Enter note title..."
-                    value="<?php echo htmlspecialchars($_POST['title'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"     
+                    value="<?php echo htmlspecialchars($_POST['title'] ?? '', ENT_QUOTES, 'UTF-8');//prevent XSS?>"     
                     >
                 </div>
 
@@ -73,7 +73,7 @@
                     id="content"
                     name="content"
                     placeholder="Enter note content..."
-                    <?php echo htmlspecialchars($_POST['content'] ?? '', ENT_QUOTES, 'UTF-8'); ?>></textarea>
+                    <?php echo htmlspecialchars($_POST['content'] ?? '', ENT_QUOTES, 'UTF-8');//prevent XSS?>></textarea>
                 </div>
 
                 <button type="submit">Save Note</button>
@@ -90,10 +90,10 @@
                             if(isset($matches[1]) && isset($matches[2])):
                         ?>
                         <div class="note-title">
-                            <?php echo htmlspecialchars($matches[1], ENT_QUOTES, 'UTF-8'); ?>
+                            <?php echo htmlspecialchars($matches[1], ENT_QUOTES, 'UTF-8');//prevent XSS?>
                         </div>
                         <div class="note-content">
-                            <?php echo htmlspecialchars($matches[2], ENT_QUOTES, 'UTF-8'); ?>
+                            <?php echo htmlspecialchars($matches[2], ENT_QUOTES, 'UTF-8');//prevent XSS?>
                         </div>
                         <?php endif; ?>
                     </div>
@@ -107,4 +107,5 @@
 
     </div>
 </body> 
+
 </html>
